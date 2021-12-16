@@ -8,17 +8,21 @@ def isIncreasing(num_list):
   down_count = 0
   same = 0
   total = (len(num_list)-1)
-  print (total)
   base = num_list[0]
   for i in num_list:
-    if i > base:
-      up_count = up_count + 1
-    elif i < base:
+    if i < base:
       down_count = down_count + 1
+    elif i > base:
+      up_count = up_count + 1
     else:
       same = same + 1
   base = i
-  print (up_count, down_count, same)
+
+  print (up_count, down_count, same, total)
+  if down_count > 0 :
+    return False
+  else:
+    return True
 
     
       
@@ -33,7 +37,7 @@ def numConvert(num_list):
   for i in num_list:
     result = result +(str(i)) 
   result = (int(result) )
-  print (result)
+  return (result)
 
 # Assume all items in the list are positive single digits.
 
@@ -42,8 +46,14 @@ def numConvert(num_list):
 # ------------------- Question 3 ----------------
 # some brief description of what the output should be
 
-ex_up = [1,2,3,4,5,6,7,8,9]
+ex_up = [1,2,3,4,23,6,7,8,9]
 ex_down = [9,8,7,6,5,4,3,2,1]
-ex_2 = [3,5,1,1,2,3,4,5,6,7,8,9]
-isIncreasing(ex_up)
-numConvert(ex_2)
+ex_2 = [3,5,1,1,5,3]
+print(isIncreasing(ex_up))
+print(isIncreasing(ex_down))
+
+# question2 presentation and response
+print('''------------------- Question 2 ----------------
+The list of numbers are turned into strings and then they are put together and the final result is then turned back into an integer!''')
+print('when given the list numbers of',ex_2,"the numConvert functiion then turns it into", numConvert(ex_2))
+
