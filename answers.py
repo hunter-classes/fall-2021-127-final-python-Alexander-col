@@ -52,6 +52,9 @@ ex_2 = [3,5,1,1,5,3]
 print(isIncreasing(ex_up))
 print(isIncreasing(ex_down))
 
+print(''' ------------------- Question 1 ----------------
+There is a counter that keep track of the values that incresed and those that decreased. If there is a single value that decreased the the function will return false.''')
+
 # question2 presentation and response
 print('''------------------- Question 2 ----------------
 The list of numbers are turned into strings and then they are put together and the final result is then turned back into an integer!''')
