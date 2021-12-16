@@ -43,7 +43,8 @@ def binConvert(b_num):
   val = 1
   for i in b_num[::-1]: 
       if i == '1':
-        result  =val**2 + result
+        result  =val*2 + result
+      val = val + 1
   return result
 
 ex_up = [1,2,3,4,5,6,7,8,9]
